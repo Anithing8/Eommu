@@ -3,15 +3,13 @@
 A calm, offline-capable task tracker built as an installable web app (PWA). No accounts, no tracking, no dependencies: plain HTML, CSS and JavaScript.
 
 ## Features
-- Multiple lists (create, rename, delete)
-- Tasks with details, due date and time, stars, and subtasks
-- Repeating tasks (daily, weekly, monthly)
-- Move tasks between lists, sort by order, due date or stars
-- Completed section and "Clear done"
-- **Copy yesterday**: brings the previous day's tasks (and subtasks) into today, skipping duplicates
+- Multiple lists (create, rename, delete) with visible delete buttons and undo
+- Tasks with details, due date and time, stars, subtasks and repeats (daily, weekly, monthly)
+- Move tasks between lists, sort by order, due date or stars, remove completed tasks
+- **Copy from list**: pick another list and copy (or move) chosen tasks, subtasks included, into the current one
 - Due-time reminders via notifications
 - **Share to Eommu**: send text or a link from another app's share menu to create a task
-- Neumorphic light and dark themes, with a drifting ring-and-check background (disabled for reduced-motion users)
+- Bauhaus-style interface with light and dark themes, over a slowly turning, shaded flower background (still image for reduced-motion users)
 - Works offline; data is stored locally on your device
 
 ## Deploy on GitHub Pages (no workflow needed)
@@ -26,8 +24,8 @@ A calm, offline-capable task tracker built as an installable web app (PWA). No a
 - **iPhone/iPad:** Share → **Add to Home Screen**. Notifications work on iOS 16.4+ for installed apps; the share menu entry is not supported by iOS web apps.
 - Tap the bell once to allow reminders.
 
-## Known limits
-Reminders fire when Eommu is open or running in the background. Browsers may suspend background apps, so a reminder can arrive late or not at all. Guaranteed delivery with the app closed requires a push server, which Eommu intentionally does not use to keep your data private.
+## Reminders
+Tap **Remind** once to allow notifications. Reminders are delivered while Eommu is open or running in the background. On installed Chrome/Edge apps, Eommu also asks the browser to wake it periodically so reminders that came due while it was closed can still appear, but the browser decides when, so they can be late. On Android, turn off battery optimisation for the app and avoid force-closing it. Exact-time delivery with the app fully closed needs a push server, which Eommu intentionally does not use, so your tasks never leave your device.
 
 ## Local development
 Serve `docs/` with any static server (for example `python3 -m http.server -d docs`). Service workers need `localhost` or HTTPS.
