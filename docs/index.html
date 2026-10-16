@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Eommu</title><meta name="description" content="Eommu, a task tracker.">
-<meta name="theme-color" content="#f2eee3"><link rel="manifest" href="manifest.webmanifest">
+<title>Eommu</title><meta name="description" content="Eommu, a quiet task tracker.">
+<meta name="theme-color" content="#f7f4ee"><link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="styles.css"></head><body>
-<canvas id="bg" aria-hidden="true"></canvas>
 <main>
-<header class="top"><div class="brand"><i class="s c"></i><i class="s q"></i><i class="s t"></i><h1>Eommu</h1></div><button id="bell" class="b"></button></header>
+<header class="mast"><div><p id="date"></p><h1>Eommu</h1></div><button id="bell" class="ib" aria-label="Reminders"></button></header>
 <nav id="tabs" aria-label="Lists"></nav>
-<section class="lbar"><div><h2 id="lname"></h2><span id="cnt"></span></div><div class="rt"><button id="ren" class="b">Rename</button><button id="dl" class="b red">Delete list</button></div></section>
-<form id="add"><input id="new" placeholder="Add a task" autocomplete="off" maxlength="200" aria-label="New task"><button class="b red">Add</button></form>
-<div class="bar"><button id="sort" class="b"></button><button id="cp" class="b blue">Copy from list</button><button id="clr" class="b">Remove done</button></div>
+<section class="head"><div><h2 id="lname"></h2><p id="cnt"></p></div><div class="mw"><button id="more" class="ib" aria-label="List options" aria-haspopup="menu"></button><div id="menu" role="menu" hidden></div></div></section>
+<form id="add"><input id="new" placeholder="Add a task" autocomplete="off" maxlength="200" aria-label="New task"><button id="go" class="go" aria-label="Add task"></button></form>
 <ul id="list"></ul>
 <details id="dn"><summary>Completed <span id="dc"></span></summary><ul id="done"></ul></details>
 </main>
 <dialog id="dlg"></dialog><div id="toast" role="status"></div>
-<script src="flowers.js"></script><script src="app.js"></script></body></html>
+<script src="app.js"></script></body></html>
