@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Eommu</title><meta name="description" content="Eommu, a quiet task tracker.">
+<meta name="theme-color" content="#f7f4ee"><link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css"></head><body>
+<main>
+<header class="mast"><div class="brand"><svg viewBox="18 18 72 72" aria-hidden="true"><path d="M79.8 45.9A27.4 27.4 0 1 1 63.4 29.5M41.3 56.5l10.2 10.6 26.9-32.5" fill="none" stroke="currentColor" stroke-width="5.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Eommu</div><button id="bell" class="ib" aria-label="Reminders"></button></header>
+<h1 id="greet"></h1><p id="date"></p>
+<nav id="tabs" aria-label="Lists"></nav>
+<section class="card sum"><div class="top"><div><h2 id="lname"></h2><p id="cnt"></p></div><div class="mw"><button id="more" class="ib" aria-label="List options" aria-haspopup="menu"></button><div id="menu" role="menu" hidden></div></div></div><div class="bar"><i id="prog"></i></div></section>
+<ul id="list"></ul>
+<details id="dn"><summary>Completed <span id="dc"></span></summary><ul id="done"></ul></details>
+</main>
+<form id="add" class="dock"><div id="qc" class="chips" hidden></div><div class="r"><input id="new" placeholder="Add a task" autocomplete="off" maxlength="200" aria-label="New task"><button id="go" class="go" aria-label="Add task"></button></div></form>
+<dialog id="dlg"></dialog><div id="toast" role="status"></div>
+<script src="app.js"></script></body></html>
